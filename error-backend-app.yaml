@@ -1,0 +1,31 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: quotesbackend
+spec:
+  replicas: 1
+  minReadySeconds: 5
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  template:
+    metadata:
+      labels:
+        name: quotesbackend
+        quotesapp: backend
+        version: v1
+    spec:
+      containers:
+      - name: quotes
+        image: csaocpger/quotesbackend:5
+        ports:
+          - containerPort: 3000
+            name: http         
+            protocol: TCP
+        env: 
+          - name: "FAIL_ENABLED"
+            value: "1"
+          - name: "IMAGE"
+            value: "csaocpger/quotesbackend:5"
