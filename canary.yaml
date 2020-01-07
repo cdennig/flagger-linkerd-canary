@@ -17,8 +17,8 @@ spec:
     threshold: 5
     # max traffic percentage routed to canary
     # percentage (0-100)
-    maxWeight: 50
-    stepWeight: 5
+    maxWeight: 70
+    stepWeight: 10
     metrics:
     - name: request-success-rate
       # minimum req success rate (non 5xx responses)
