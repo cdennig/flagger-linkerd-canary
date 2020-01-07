@@ -23,8 +23,8 @@ Flagger integration:
 
 Trigger canary deployment:
 
-- kubectl apply -f st-backend-app.yaml
+- kubectl apply -f st-backend-app.yaml -n quotes
 
 Provoke rollback of a canary deployment (after 1 minute, errors are thrown by the app):
 
-- kubectl apply -f error-backend-app.yaml
+- kubectl apply -f error-backend-app.yaml -n quotes
