@@ -1,8 +1,13 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: quotesbackend
 spec:
+  selector:
+      matchLabels:
+        name: quotesbackend
+        quotesapp: backend
+        version: v1
   replicas: 1
   minReadySeconds: 5
   strategy:

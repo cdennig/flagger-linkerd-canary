@@ -1,4 +1,4 @@
-apiVersion: flagger.app/v1alpha3
+apiVersion: flagger.app/v1beta1
 kind: Canary
 metadata:
   name: quotesbackend
@@ -11,7 +11,7 @@ spec:
   service:
     port: 3000
     targetPort: 3000
-  canaryAnalysis:
+  analysis:
     interval: 20s
     # max number of failed metric checks before rollback
     threshold: 5

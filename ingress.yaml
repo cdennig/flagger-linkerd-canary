@@ -12,7 +12,7 @@ metadata:
       proxy_hide_header l5d-server-id;
 spec:
   rules:
-    - host: 51-124-13-139.nip.io
+    - host: 52-143-30-72.nip.io
       http:
         paths:
           - path: /quotes
@@ -34,7 +34,7 @@ metadata:
       proxy_hide_header l5d-server-id;
 spec:
   rules:
-    - host: 51-124-13-139.nip.io
+    - host: 52-143-30-72.nip.io
       http:
         paths:
           - path: /
